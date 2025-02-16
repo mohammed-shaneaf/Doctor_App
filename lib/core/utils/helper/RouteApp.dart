@@ -1,4 +1,5 @@
-import 'package:doctor_app/Features/splash/presentation/splash_view.dart';
+import 'package:doctor_app/Features/Splash/presentation/splash_view.dart';
+import 'package:doctor_app/Features/on_boarding/presentation/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -6,6 +7,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case SplashView.routeName:
       return MaterialPageRoute(
         builder: (context) => const SplashView(),
+      );
+
+    case OnBoardingView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const OnBoardingView(),
       );
     default:
       return MaterialPageRoute(

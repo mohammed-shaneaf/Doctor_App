@@ -1,4 +1,5 @@
-import 'package:doctor_app/Features/splash/presentation/widgets/build_background.dart';
+import 'package:doctor_app/Features/Splash/presentation/widgets/build_background.dart';
+import 'package:doctor_app/Features/on_boarding/presentation/on_boarding_view.dart';
 import 'package:doctor_app/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,9 +14,10 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    
-    
+    super.initState();
+    executeNavigation();
   }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -48,5 +50,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         ],
       ),
     );
+  }
+
+  void executeNavigation() {
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+    });
   }
 }
