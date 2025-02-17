@@ -1,3 +1,4 @@
+import 'package:doctor_app/Features/Auth/presentation/login_view.dart';
 import 'package:doctor_app/Features/Splash/presentation/splash_view.dart';
 import 'package:doctor_app/Features/on_boarding/presentation/on_boarding_view.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case OnBoardingView.routeName:
       return MaterialPageRoute(
         builder: (context) => const OnBoardingView(),
+      );
+
+    case LoginView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const LoginView(),
       );
     default:
       return MaterialPageRoute(

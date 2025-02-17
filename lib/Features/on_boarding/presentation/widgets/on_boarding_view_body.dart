@@ -17,7 +17,7 @@ class OnBoardingViewBody extends StatelessWidget {
           40.verticalSpace,
           buildDoctorImage(),
           18.verticalSpace,
-          buildDescription(),
+          DescriptionSection(),
         ],
       ),
     );

@@ -1,9 +1,12 @@
+import 'package:doctor_app/Features/Auth/presentation/login_view.dart';
 import 'package:doctor_app/core/utils/app_color.dart';
 import 'package:doctor_app/core/utils/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Widget buildDescription() {
+class DescriptionSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
@@ -14,9 +17,15 @@ Widget buildDescription() {
         32.verticalSpace,
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: CustomButton(onPressed: () {}, text: 'Get Started'),
+          child: CustomButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, LoginView.routeName);
+            },
+            text: 'Get Started',
+          ),
         ),
         32.verticalSpace,
       ],
     );
   }
+}
