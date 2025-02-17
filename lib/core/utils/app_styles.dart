@@ -9,4 +9,10 @@ abstract class AppStyles {
     fontSize: 32,
     fontWeight: FontWeight.bold,
   );
+
+  static TextStyle text24 = TextStyle(
+    color: Colors.white,
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+  );
 }
